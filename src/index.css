@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.container{
+		@apply max-w-[1600px] mx-auto p-0 sm:px-6 lg:px-8 pt-8;
+	}
+.btn{
+  @apply  font-medium rounded-none text-sm px-5 py-2.5 mr-2 mb-2 
+}
+.btn-alternative{
+  @apply text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700
+}
+.btn-blue{
+  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-indigo{
+	@apply text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:bg-indigo-800
+}
+
+.btn-rose{
+	@apply text-white bg-rose-600 hover:bg-rose-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-rose-500 dark:hover:bg-rose-600 focus:outline-none dark:focus:bg-rose-700
+}
+
+.btn-success{
+	@apply focus:outline-none text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-none text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-400 dark:hover:bg-green-500 dark:focus:ring-green-600}
+
+.btn-danger{
+  @apply text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-800}
+
+.btn-warning{
+  @apply text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900}
+
+.btn-sm{
+  @apply text-sm px-4 py-2 mr-2 mb-2 
+}
+}
+.loader {
+	border-top-color: #3498db;
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+.image.thumb {
+  position: absolute;
+  width: 300px;
+  height: auto;
+}
+.full {
+  transition: opacity 400ms ease 0ms;
+}
+.thumb {
+  filter: blur(5px);
+  transform: scale(0.95);
+  transition: visibility 0ms ease 400ms;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali&family=Noto+Sans+Thai+Looped&family=Sriracha&display=swap');
+.font-Noto{
+	font-family: 'Noto Sans Thai Looped', sans-serif;
+}
+.font-Sriracha{
+	font-family: 'Sriracha', cursive;
+}
+.font-Mali{
+	font-family: 'Mali', cursive;
+}
+
+
+#AssetRowItem img{
+	display: inline-block;
+	font-family: Arial;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre-wrap;
 }
